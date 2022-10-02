@@ -1,0 +1,10 @@
+draw_self();
+draw_set_color(c_white);
+draw_set_font(Font_16);
+draw_set_halign(fa_left);
+draw_set_valign(fa_middle);
+var str = "";
+if(totalTime<10) str = __("NOT_FULL");
+else if(totalTime==10) str = __("FULL");
+else str = __("OVERLOAD");
+draw_text(x+24,y,string(totalTime)+"/10  "+str);
